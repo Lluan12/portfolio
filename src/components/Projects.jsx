@@ -28,7 +28,7 @@ const PROJECTS = [
 			"Sitio de Gifs el cual permite realizar busquedas o ver los que se encuentran en tendencia. Se utilizo una API externa para la recuperacion de los Gifs, se implemento un historial de busqueda y persistencia de los datos ya buscados utilizando Storage.",
 		link: "https://gifs-app-orcin.vercel.app/dashboard/trending",
 		github: "https://github.com/Lluan12/gifs-app",
-		image: "/src/assets/appgifs.webp",
+		image: "/assets/appgifs.webp",
 		tags: [TAGS.ANGULAR, TAGS.TAILWIND],
 	},
 	{
@@ -38,7 +38,7 @@ const PROJECTS = [
 			"Sitio Web informativo de los servicios ofrecidos por un ingniero civil especializado en topografia. Se empleo un sistema de login utilizando la autenticacion de firebase para permitir de manera dinamica el acceso registro de los proyectos trabajados.",
 		link: "https://sth-hernandez-topografia.web.app/home",
 		github: "https://github.com/Lluan12/soluciones-topograficas-hernandez",
-		image: "/src/assets/sth.webp",
+		image: "/assets/sth.webp",
 		tags: [TAGS.ANGULAR, TAGS.TAILWIND, TAGS.FIREBASE],
 	},
 ];

@@ -20,7 +20,7 @@ export function About() {
 			<img
 				width="200"
 				height="200"
-				src="/src/assets/perfil.jpg"
+				src="/assets/perfil.jpg"
 				alt="Isaac Hernandez"
 				className="order-1 object-cover object-top w-64 h-full p-1 -rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-black/20 dark:bg-yellow-500/5 ring-1 ring-black/70 dark:ring-white/20"
 			/>
