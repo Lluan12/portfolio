@@ -21,14 +21,13 @@ export function Home() {
 				<div className="flex gap-4 mb-4">
 					<img
 						className="rounded-full w-16 h-16"
-						src="https://media.licdn.com/dms/image/v2/D5603AQEktOCd7UUx-Q/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1731446344299?e=1753920000&v=beta&t=8b_OHSXvuR2W1gdQZtfKEF8q0wR_hcJIMFzOhLRY-F8"
+						src="assets/image.png"
 						alt="lluan photo"
 					/>
 					<a
 						href="https://linkedin.com/in/isaac-hernandez-gonzalez-b22664231"
 						className="flex items-center transition md:justify-center md:hover:scale-105"
 						target="_blank"
-						rel="noopener"
 					>
 						<Badge>Disponible para trabajar</Badge>
 					</a>
@@ -42,7 +41,8 @@ export function Home() {
 					<span className="text-yellow-200/90">
 						Desarrollador Web Full Stack
 					</span>
-					. Comprometido con el aprendizaje continuo y la mejora constante.
+					. Comprometido con el aprendizaje continuo y la mejora
+					constante.
 				</h2>
 				<nav className="flex gap-4 mt-8 flex-wrap">
 					<SocialPill href="https://linkedin.com/in/isaac-hernandez-gonzalez-b22664231">
