@@ -1,4 +1,4 @@
-import { Badge } from "../components/badge";
+import { Badge } from "../components/Badge";
 import { SocialPill } from "../components/SocialPill";
 import { Experience } from "../components/Experience";
 import { SectionContainer } from "../components/SectionContainer";
