@@ -1,6 +1,9 @@
 import AngularIcon from "../components/icons/Angular";
 import TailwindIcon from "../components/icons/Tailwind";
 import FirebaseIcon from "../components/icons/Firebase";
+import ExpressIcon from "../components/icons/Expressjs";
+import TypescriptIcon from "../components/icons/TypeScript";
+import MongoDBIcon from "../components/icons/Mongo";
 
 const TAGS = {
 	ANGULAR: {
@@ -18,28 +21,52 @@ const TAGS = {
 		class: "bg-[#dd2c00]/30 text-white",
 		icon: FirebaseIcon,
 	},
+	EXPREES: {
+		name: "Express",
+		class: "bg-gray-900/80",
+		icon: ExpressIcon,
+	},
+	TYPESCRIPT: {
+		name: "TypeScript",
+		class: "bg-blue-900/40",
+		icon: TypescriptIcon,
+	},
+	MONGODB: {
+		name: "MongoDB",
+		class: "bg-[#001e2b]",
+		icon: MongoDBIcon,
+	},
 };
 
 const PROJECTS = [
 	{
 		id: 1,
+		title: "STH - Soluciones Topograficas Hernandez",
+		description:
+			"Aplicación web informativo de los servicios ofrecidos por un ingniero civil especializado en topografia. Se empleo un sistema de login utilizando la autenticacion por medio de JWT para permitir de manera dinamica el acceso al sisema y poder dar registro de los proyectos trabajados por medio de express para la creación de la lógica.",
+		link: "https://sth-hernandez-topografia.web.app/home",
+		frontGithub:
+			"https://github.com/Lluan12/soluciones-topograficas-hernandez",
+		backendGithub: "https://github.com/Lluan12/api-sth",
+		image: "/assets/sth.webp",
+		tags: [
+			TAGS.ANGULAR,
+			TAGS.TAILWIND,
+			TAGS.EXPREES,
+			TAGS.TYPESCRIPT,
+			TAGS.MONGODB,
+		],
+	},
+	{
+		id: 2,
 		title: "Gifs App",
 		description:
 			"Sitio de Gifs el cual permite realizar busquedas o ver los que se encuentran en tendencia. Se utilizo una API externa para la recuperacion de los Gifs, se implemento un historial de busqueda y persistencia de los datos ya buscados utilizando Storage.",
 		link: "https://gifs-app-orcin.vercel.app/dashboard/trending",
-		github: "https://github.com/Lluan12/gifs-app",
+		frontGithub: "https://github.com/Lluan12/gifs-app",
+		backendGithub: "",
 		image: "/assets/appgifs.webp",
 		tags: [TAGS.ANGULAR, TAGS.TAILWIND],
-	},
-	{
-		id: 2,
-		title: "STH - Soluciones Topograficas Hernandez",
-		description:
-			"Sitio Web informativo de los servicios ofrecidos por un ingniero civil especializado en topografia. Se empleo un sistema de login utilizando la autenticacion de firebase para permitir de manera dinamica el acceso registro de los proyectos trabajados.",
-		link: "https://sth-hernandez-topografia.web.app/home",
-		github: "https://github.com/Lluan12/soluciones-topograficas-hernandez",
-		image: "/assets/sth.webp",
-		tags: [TAGS.ANGULAR, TAGS.TAILWIND, TAGS.FIREBASE],
 	},
 ];
 
@@ -47,7 +74,16 @@ export function Projects() {
 	return (
 		<div className="flex flex-col gap-y-16">
 			{PROJECTS.map(
-				({ id, title, description, tags, image, link, github }) => {
+				({
+					id,
+					title,
+					description,
+					tags,
+					image,
+					link,
+					frontGithub,
+					backendGithub,
+				}) => {
 					return (
 						<article
 							key={id}
@@ -88,7 +124,7 @@ export function Projects() {
 									<footer className="flex items-end justify-start mt-4 gap-x-4">
 										<a
 											target="_blank"
-											href={github}
+											href={frontGithub}
 											role="link"
 											className="inline-flex bg-gray-100 text-gray-800 border-gray-300 items-center justify-center gap-2 px-3 py-2 space-x-2 text-base transition dark:text-white dark:bg-gray-800 border dark:border-gray-600 focus-visible:ring-yellow-500/80 text-md hover:bg-gray-800 hover:border-gray-900 group max-w-fit rounded-xl hover:text-white focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-offset-2 active:bg-black"
 										>
@@ -111,8 +147,43 @@ export function Projects() {
 												></path>
 												<path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path>
 											</svg>
-											Code
+											{backendGithub == ""
+												? "GitHub"
+												: "Front"}
 										</a>
+
+										{backendGithub != "" ? (
+											<a
+												target="_blank"
+												href={backendGithub}
+												role="link"
+												className="inline-flex bg-gray-100 text-gray-800 border-gray-300 items-center justify-center gap-2 px-3 py-2 space-x-2 text-base transition dark:text-white dark:bg-gray-800 border dark:border-gray-600 focus-visible:ring-yellow-500/80 text-md hover:bg-gray-800 hover:border-gray-900 group max-w-fit rounded-xl hover:text-white focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-offset-2 active:bg-black"
+											>
+												<svg
+													className="size-6"
+													xmlns="http://www.w3.org/2000/svg"
+													width="24"
+													height="24"
+													viewBox="0 0 24 24"
+													strokeWidth="2"
+													stroke="currentColor"
+													fill="none"
+													strokeLinecap="round"
+													strokeLinejoin="round"
+												>
+													<path
+														stroke="none"
+														d="M0 0h24v24H0z"
+														fill="none"
+													></path>
+													<path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path>
+												</svg>
+												Back
+											</a>
+										) : (
+											""
+										)}
+
 										<a
 											target="_blank"
 											href={link}
