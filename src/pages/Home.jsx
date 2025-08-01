@@ -14,10 +14,7 @@ import CheckIcon from "../components/icons/Check";
 export function Home() {
 	return (
 		<main className="px-4">
-			<SectionContainer
-				id="top"
-				className="pt-44 pb-32"
-			>
+			<SectionContainer className="pt-10 sm:pt-44 sm:pb-32">
 				<div className="flex gap-4 mb-4">
 					<img
 						className="rounded-full w-16 h-16"
@@ -60,10 +57,7 @@ export function Home() {
 				</nav>
 			</SectionContainer>
 
-			<SectionContainer
-				id="about"
-				className="py-20"
-			>
+			<SectionContainer id="about" className="py-10 sm:py-20">
 				<h2 className="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
 					<CheckIcon className="size-7 gap-x-2" />
 					Sobre mí
@@ -71,7 +65,7 @@ export function Home() {
 				<About />
 			</SectionContainer>
 
-			<SectionContainer id="experience">
+			<SectionContainer id="experience" className="py-10 sm:py-20">
 				<h2 className="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
 					<Briefcase className="size-7 gap-x-2" />
 					Experiencia
@@ -79,10 +73,7 @@ export function Home() {
 				<Experience />
 			</SectionContainer>
 
-			<SectionContainer
-				id="projects"
-				className="py-20"
-			>
+			<SectionContainer id="projects" className="py-10 sm:py-20">
 				<h2 className="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
 					<CodeIcon className="size-7 gap-x-2" />
 					Proyectos

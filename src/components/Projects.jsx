@@ -104,7 +104,7 @@ export function Projects() {
 									{title}
 								</h3>
 								<div className="flex flex-wrap mt-2">
-									<ul className="flex flex-row mb-2 gap-x-2">
+									<ul className="flex flex-row flex-wrap mb-2 gap-x-2 gap-y-4">
 										{tags.map((tag) => {
 											return (
 												<li key={tag.name}>
