@@ -4,6 +4,8 @@ import FirebaseIcon from "../components/icons/Firebase";
 import ExpressIcon from "../components/icons/Expressjs";
 import TypescriptIcon from "../components/icons/TypeScript";
 import MongoDBIcon from "../components/icons/Mongo";
+import DartIcon from "../components/icons/Dart";
+import FlutterIcon from "../components/icons/Flutter";
 
 const TAGS = {
 	ANGULAR: {
@@ -36,11 +38,39 @@ const TAGS = {
 		class: "bg-[#001e2b]",
 		icon: MongoDBIcon,
 	},
+	DART: {
+		name: "Dart",
+		class: "bg-[#001e2b]",
+		icon: DartIcon,
+	},
+	FLUTTER: {
+		name: "Flutter",
+		class: "bg-[#001e2b]",
+		icon: FlutterIcon,
+	},
 };
 
 const PROJECTS = [
 	{
 		id: 1,
+		title: "Book Note",
+		description:
+			"Aplicación web con finalidad para crear, editar y almacenar notas. Se empleo un sistema de login utilizando firebase, se creo una API con express para manejar el guardado de las notas utilizando mongodb.",
+		link: "",
+		frontGithub: "https://github.com/Lluan12/book-note",
+		backendGithub: "",
+		image: "/assets/book-note.webp",
+		tags: [
+			TAGS.ANGULAR,
+			TAGS.TAILWIND,
+			TAGS.FIREBASE,
+			TAGS.EXPREES,
+			TAGS.TYPESCRIPT,
+			TAGS.MONGODB,
+		],
+	},
+	{
+		id: 2,
 		title: "STH - Soluciones Topograficas Hernandez",
 		description:
 			"Aplicación web informativo de los servicios ofrecidos por un ingniero civil especializado en topografia. Se empleo un sistema de login utilizando la autenticacion por medio de JWT para permitir de manera dinamica el acceso al sisema y poder dar registro de los proyectos trabajados por medio de express para la creación de la lógica.",
@@ -58,7 +88,7 @@ const PROJECTS = [
 		],
 	},
 	{
-		id: 2,
+		id: 3,
 		title: "Gifs App",
 		description:
 			"Sitio de Gifs el cual permite realizar busquedas o ver los que se encuentran en tendencia. Se utilizo una API externa para la recuperacion de los Gifs, se implemento un historial de busqueda y persistencia de los datos ya buscados utilizando Storage.",
@@ -67,6 +97,17 @@ const PROJECTS = [
 		backendGithub: "",
 		image: "/assets/appgifs.webp",
 		tags: [TAGS.ANGULAR, TAGS.TAILWIND],
+	},
+	{
+		id: 4,
+		title: "AppGallery",
+		description:
+			"Aplicacion movil de registro y manejo de eventos. Se utilizo firebase para la implementacion de login, y almacenamiento de los datos",
+		link: "",
+		frontGithub: "https://github.com/PaulOchoa952/appGallery_01",
+		backendGithub: "",
+		image: "/assets/appGallery.webp",
+		tags: [TAGS.DART, TAGS.FLUTTER, TAGS.FIREBASE],
 	},
 ];
 
@@ -184,29 +225,33 @@ export function Projects() {
 											""
 										)}
 
-										<a
-											target="_blank"
-											href={link}
-											role="link"
-											className="inline-flex bg-gray-100 text-gray-800 border-gray-300 items-center justify-center gap-2 px-3 py-2 space-x-2 text-base transition dark:text-white dark:bg-gray-800 border dark:border-gray-600 focus-visible:ring-yellow-500/80 text-md hover:bg-gray-800 hover:border-gray-900 group max-w-fit rounded-xl hover:text-white focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-offset-2 active:bg-black"
-										>
-											<svg
-												className="size-4"
-												xmlns="http://www.w3.org/2000/svg"
-												width="24"
-												height="24"
-												viewBox="0 0 24 24"
-												fill="none"
-												stroke="currentColor"
-												strokeWidth="2"
-												strokeLinecap="round"
-												strokeLinejoin="round"
+										{link != "" ? (
+											<a
+												target="_blank"
+												href={link}
+												role="link"
+												className="inline-flex bg-gray-100 text-gray-800 border-gray-300 items-center justify-center gap-2 px-3 py-2 space-x-2 text-base transition dark:text-white dark:bg-gray-800 border dark:border-gray-600 focus-visible:ring-yellow-500/80 text-md hover:bg-gray-800 hover:border-gray-900 group max-w-fit rounded-xl hover:text-white focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-offset-2 active:bg-black"
 											>
-												<path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
-												<path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
-											</svg>
-											Preview
-										</a>
+												<svg
+													className="size-4"
+													xmlns="http://www.w3.org/2000/svg"
+													width="24"
+													height="24"
+													viewBox="0 0 24 24"
+													fill="none"
+													stroke="currentColor"
+													strokeWidth="2"
+													strokeLinecap="round"
+													strokeLinejoin="round"
+												>
+													<path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+													<path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+												</svg>
+												Preview
+											</a>
+										) : (
+											""
+										)}
 									</footer>
 								</div>
 							</div>
