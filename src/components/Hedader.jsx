@@ -1,7 +1,7 @@
 import { initFlowbite } from "flowbite";
 
 export function Header() {
-	initFlowbite;
+	initFlowbite();
 	
 	return (
 		<header className="sm:fixed sm:top-0 sm:z-10 sm:flex sm:items-center sm:justify-center sm:w-full sm:mx-auto sm:mt-2">
