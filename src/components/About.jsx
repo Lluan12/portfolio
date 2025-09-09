@@ -13,7 +13,7 @@ export function About() {
 				<p>
 					Me destaco por mi responsabilidad, conocimientos y trabajo en equipo busco integrarme a un equipo de desarrollo donde pueda{" "}
 					<strong className="text-yellow-100">
-						continuar aprendiendo, aportar valor desde el primer día y crecer profesionalmente dentro del mundo tecnológico.
+						aportar valor y crecer profesionalmente dentro del mundo tecnológico.
 					</strong>
 				</p>
 			</div>

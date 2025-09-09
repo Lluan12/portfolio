@@ -14,7 +14,7 @@ import CheckIcon from "../components/icons/Check";
 export function Home() {
 	return (
 		<main className="px-4">
-			<SectionContainer className="pt-10 sm:pt-44 sm:pb-32">
+			<SectionContainer className="pt-30 sm:pt-44 sm:pb-32">
 				<div className="flex gap-4 mb-4">
 					<img
 						className="rounded-full w-16 h-16"
@@ -34,12 +34,10 @@ export function Home() {
 					Hola, soy Isaac Hernandez
 				</h1>
 				<h2 className="text-xl lg:text-2xl text-wrap max-w-[700px]">
-					<span>+1 año de experiencia</span>.{" "}
 					<span className="text-yellow-200/90">
 						Desarrollador Web Full Stack
 					</span>
-					. Comprometido con el aprendizaje continuo y la mejora
-					constante.
+					. Me gusta desarrollar software a medida para la resolucion de problemas.
 				</h2>
 				<nav className="flex gap-4 mt-8 flex-wrap">
 					<SocialPill href="https://linkedin.com/in/isaac-hernandez-gonzalez-b22664231">

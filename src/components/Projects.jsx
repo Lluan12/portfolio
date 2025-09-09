@@ -6,6 +6,7 @@ import TypescriptIcon from "../components/icons/TypeScript";
 import MongoDBIcon from "../components/icons/Mongo";
 import DartIcon from "../components/icons/Dart";
 import FlutterIcon from "../components/icons/Flutter";
+import ReactIcon from "../components/icons/React";
 
 const TAGS = {
 	ANGULAR: {
@@ -48,6 +49,11 @@ const TAGS = {
 		class: "bg-[#001e2b]",
 		icon: FlutterIcon,
 	},
+	REACT: {
+		name: "React",
+		class: "bg-[#001e2b]",
+		icon: ReactIcon,
+	},
 };
 
 const PROJECTS = [
@@ -89,17 +95,6 @@ const PROJECTS = [
 	},
 	{
 		id: 3,
-		title: "Gifs App",
-		description:
-			"Sitio de Gifs el cual permite realizar busquedas o ver los que se encuentran en tendencia. Se utilizo una API externa para la recuperacion de los Gifs, se implemento un historial de busqueda y persistencia de los datos ya buscados utilizando Storage.",
-		link: "https://gifs-app-orcin.vercel.app/dashboard/trending",
-		frontGithub: "https://github.com/Lluan12/gifs-app",
-		backendGithub: "",
-		image: "/assets/appgifs.webp",
-		tags: [TAGS.ANGULAR, TAGS.TAILWIND],
-	},
-	{
-		id: 4,
 		title: "AppGallery",
 		description:
 			"Aplicacion movil de registro y manejo de eventos. Se utilizo firebase para la implementacion de login, y almacenamiento de los datos",
@@ -108,6 +103,28 @@ const PROJECTS = [
 		backendGithub: "",
 		image: "/assets/appGallery.webp",
 		tags: [TAGS.DART, TAGS.FLUTTER, TAGS.FIREBASE],
+	},
+	{
+		id: 4,
+		title: "Prueba Tecnica JR React",
+		description:
+			"Pequeña prueba tecnica desarrollado en React junto con la libreria MUI para la utilizacion de components. Ademas de un diseño sencillo con responsive",
+		link: "https://prueba-seven-sigma.vercel.app/",
+		frontGithub: "",
+		backendGithub: "",
+		image: "/assets/react-app.webp",
+		tags: [TAGS.REACT, TAGS.TAILWIND],
+	},
+	{
+		id: 5,
+		title: "Gifs App",
+		description:
+			"Sitio de Gifs el cual permite realizar busquedas o ver los que se encuentran en tendencia. Se utilizo una API externa para la recuperacion de los Gifs, se implemento un historial de busqueda y persistencia de los datos ya buscados utilizando Storage.",
+		link: "https://gifs-app-orcin.vercel.app/dashboard/trending",
+		frontGithub: "https://github.com/Lluan12/gifs-app",
+		backendGithub: "",
+		image: "/assets/appgifs.webp",
+		tags: [TAGS.ANGULAR, TAGS.TAILWIND],
 	},
 ];
 
@@ -163,35 +180,39 @@ export function Projects() {
 										{description}
 									</div>
 									<footer className="flex items-end justify-start mt-4 gap-x-4">
-										<a
-											target="_blank"
-											href={frontGithub}
-											role="link"
-											className="inline-flex bg-gray-100 text-gray-800 border-gray-300 items-center justify-center gap-2 px-3 py-2 space-x-2 text-base transition dark:text-white dark:bg-gray-800 border dark:border-gray-600 focus-visible:ring-yellow-500/80 text-md hover:bg-gray-800 hover:border-gray-900 group max-w-fit rounded-xl hover:text-white focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-offset-2 active:bg-black"
-										>
-											<svg
-												className="size-6"
-												xmlns="http://www.w3.org/2000/svg"
-												width="24"
-												height="24"
-												viewBox="0 0 24 24"
-												strokeWidth="2"
-												stroke="currentColor"
-												fill="none"
-												strokeLinecap="round"
-												strokeLinejoin="round"
+										{frontGithub != "" ? (
+											<a
+												target="_blank"
+												href={frontGithub}
+												role="link"
+												className="inline-flex bg-gray-100 text-gray-800 border-gray-300 items-center justify-center gap-2 px-3 py-2 space-x-2 text-base transition dark:text-white dark:bg-gray-800 border dark:border-gray-600 focus-visible:ring-yellow-500/80 text-md hover:bg-gray-800 hover:border-gray-900 group max-w-fit rounded-xl hover:text-white focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-offset-2 active:bg-black"
 											>
-												<path
-													stroke="none"
-													d="M0 0h24v24H0z"
+												<svg
+													className="size-6"
+													xmlns="http://www.w3.org/2000/svg"
+													width="24"
+													height="24"
+													viewBox="0 0 24 24"
+													strokeWidth="2"
+													stroke="currentColor"
 													fill="none"
-												></path>
-												<path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path>
-											</svg>
-											{backendGithub == ""
-												? "GitHub"
-												: "Front"}
-										</a>
+													strokeLinecap="round"
+													strokeLinejoin="round"
+												>
+													<path
+														stroke="none"
+														d="M0 0h24v24H0z"
+														fill="none"
+													></path>
+													<path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path>
+												</svg>
+												{backendGithub == ""
+													? "GitHub"
+													: "Front"}
+											</a>
+										) : (
+											""
+										)}
 
 										{backendGithub != "" ? (
 											<a

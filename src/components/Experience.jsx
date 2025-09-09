@@ -2,7 +2,7 @@ import { ExperienceItem } from "../components/ExperienceItem";
 
 const EXPERIENCE = [
 	{
-		date: "Mayo 2024 - Noviembre 2024",
+		date: "Marzo 2024 - Octubre 2024",
 		title: "Desarrollador FullStack - Instituto Tecnológico de Tepic",
 		description:
 			"Desarrollé un módulo funcional para la plataforma de MiTec, utilizado por estudiantes y docentes del Instituto Tecnológico de Tepic para gestionar sesiones de asesoría académica.",
