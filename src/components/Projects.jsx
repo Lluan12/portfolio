@@ -64,7 +64,7 @@ const PROJECTS = [
 			"Aplicación web con finalidad para crear, editar y almacenar notas. Se empleo un sistema de login utilizando firebase, se creo una API con express para manejar el guardado de las notas utilizando mongodb.",
 		link: "",
 		frontGithub: "https://github.com/Lluan12/book-note",
-		backendGithub: "",
+		backendGithub: "https://github.com/Lluan12/api-book-note",
 		image: "/assets/book-note.webp",
 		tags: [
 			TAGS.ANGULAR,
